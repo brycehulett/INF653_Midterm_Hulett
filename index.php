@@ -1,4 +1,4 @@
 <?php 
-Echo
+echo
 "<h1>Midterm Project Hulett</h1>";
 ?>
