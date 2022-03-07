@@ -7,12 +7,6 @@
     private $username;
     private $password;
 
-    // DB Params
-    // private $host = 'kutnpvrhom7lki7u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-    // private $db_name = 'mm0a8iyg1d28s85z';
-    // private $username = 'ygi5gl3vy9z8gali';
-    // private $password;
-    
     private $conn;
 
     // DB Connect
@@ -29,10 +23,11 @@
       // Create your new PDO connection here
       // This is also from the Heroku docs showing the PDO connection: 
       try {
-        $conn = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+        $conn = new PDO("mysql:host=$hostname;dbname=$database;**charset=utf8**",$username,$password);
+        //$conn = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected successfully";
+        //echo "Connected successfully";
       }
       catch(PDOException $e)
       {
@@ -42,3 +37,25 @@
     }
   }
   
+  // class Database {
+  //   // DB Params
+  //   private $host = 'localhost';
+  //   private $db_name = 'quotesdb';
+  //   private $username = 'root';
+  //   private $password = '';
+  //   private $conn;
+
+  //   // DB Connect
+  //   public function connect() {
+  //     $this->conn = null;
+
+  //     try { 
+  //       $this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
+  //       $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  //     } catch(PDOException $e) {
+  //       echo 'Connection Error: ' . $e->getMessage();
+  //     }
+
+  //     return $this->conn;
+  //   }
+  // }
