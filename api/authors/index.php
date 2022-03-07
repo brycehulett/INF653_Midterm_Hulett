@@ -44,5 +44,6 @@
         break;
     default:
         //handle_error($request);  
+        echo 'what the?';
         break;
     }
