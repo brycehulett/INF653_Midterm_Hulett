@@ -7,10 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+<h1>Midterm Project Hulett</h1>
 </body>
 </html>
-<?php?>
-echo
-"<h1>Midterm Project Hulett</h1>";
-?>
+
