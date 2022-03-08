@@ -33,12 +33,8 @@
     echo json_encode(
       array('id' => $category->id)
     );
-  } else if($response == -1){
+  } else {
     echo json_encode(
-      array('message' => 'Cant delete: foreign key in use')
-    );
-  }else {
-    echo json_encode(
-      array('message' => 'Category not found')
+      array('message' => 'No Quotes Found')
     );
   }
