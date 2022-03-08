@@ -39,6 +39,6 @@
     );
   }else {
     echo json_encode(
-      array('message' => 'Category not found')
+      array('message' => 'categoryId Not Found')
     );
   }
