@@ -39,6 +39,6 @@
     );
   }else {
     echo json_encode(
-      array('message' => 'author not found')
+      array('message' => 'authorId Not Found')
     );
   }
