@@ -36,8 +36,9 @@
       array('id' => $author->id, 'author' => $author->author)
     );
   } else {
+      $author->author = -1;
       $author->read_single(); // row is empty? for update on same id/author
-      if($author->author){
+      if($author->author != -1){
         echo json_encode(
           array('id' => $author->id, 'author' => $author->author)
         );

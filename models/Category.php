@@ -53,6 +53,8 @@
 
       $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+      // must update id not found
+
       // set properties
       if($row && $row['category']){
           $this->id = $row['id'];

@@ -36,8 +36,9 @@
       array('id' => $category->id, 'category' => $category->category)
     );
   } else {
+      $category->category = -1;
       $category->read_single(); // row is empty? for update on same id/category
-      if($category->category){
+      if($category->category != -1){
         echo json_encode(
           array('id' => $category->id, 'category' => $category->category)
         );

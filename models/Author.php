@@ -53,6 +53,8 @@
 
       $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    
+
       // set properties
       if($row && $row['author']){
           $this->id = $row['id'];
