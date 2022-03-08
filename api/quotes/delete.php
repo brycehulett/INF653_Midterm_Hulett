@@ -29,7 +29,7 @@
 
   // Delete post
   $response = $category->delete();
-  if($response > 0) {
+  if($response) {
     echo json_encode(
       array('id' => $category->id)
     );
