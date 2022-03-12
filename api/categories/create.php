@@ -34,7 +34,7 @@
     echo json_encode(
       array(
         'id' => $id,
-        'author' => $category->category
+        'category' => $category->category
       )
     );
   } else {
